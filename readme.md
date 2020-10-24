@@ -9,11 +9,11 @@
 1. [References](#references)
 
 ### Disclaimer:
-Bagi yang ingin melihat sekilas ini tentang apa (tanpa demo), dapat dilihat di sini
-yah.
+Bagi yang ingin melihat sekilas ini tentang apa (tanpa demo), dapat dilihat di sini yah.  
 [Slide Cloud Shell](https://docs.google.com/presentation/d/1VRqML7jh32zmvi16VH67bg-Ciaw8ZtSZrvghB9fDULY)
 
-Mari kita mulai membahas tentang artikel ini.
+Mari kita mulai membahas tentang bagaimana cara kita bisa mengembangkan sebuah aplikasi,
+*fully on the cloud*, bermodalkan browser saja.
 
 ## Development Environment
 Development Environment dapat diartikan sebagai sebuah kumpulan dari alat alat yang
@@ -118,6 +118,40 @@ Cloud Shell.
 ## Demo Coding on Cloud Shell
 
 ## Limitasi Cloud Shell
+Tiada gading yang tak retak, begitu pula dengan Cloud Shell ini sendiri, pastinya akan ada
+harga yang harus dibayarkan karena kita menggunakan Cloud Shell ini sendiri, yang selanjutnya akan
+kita sebut sebagai limitasi Cloud Shell.
+
+Limitasi Cloud Shell ini adalah:
+- Limitasi dari Editor nya sendiri yang menggunakan Theia-based Editor, salah satunya adalah kita
+  tidak bisa menambahkan ekstensi yang umumnya dapat kita gunakan pada Editor yang digunakan pada
+  komputer kita sendiri.
+- Limitasi dari Cloud Shell sendiri, dimana:
+  - Tempat penyimpanan / storage yang diberikan hanya dapat disimpan pada `/home/<namauser>` saja.
+  - State pada aplikasi tidak dapat disimpan, hanya kode-nya saja (Cloud Shell memiliki idle time
+    sekitar 30 menit, apabila tidak ada aktivitas dari pengguna, maka Cloud Shell akan direstart
+    secara otomatis dan akan kembali ke state awal, kecuali data yang disimpan pada 
+    `/home/<namauser>`)
+  - Debugging aplikasi yang cukup sulit (karena menggunakan Editor Theia, cara debuggingnya berbeda)
+  - Data tidak disimpan dalam storage offline 
+    - Apabila mau kode tersebut harus didownload atau ditaruh pada server repo lainnya 
+      (mis. Github)
+  - Belum dapat digunakan untuk `Mobile App Development`, karena tidak bisa digunakan untuk usb
+    debugging / emulator
+  - Limitasi Waktu
+      - Cloud Shell sendiri hanya memiliki batas waktu sekitar 50 jam per minggu.
+
+## TL;DR
+- Dengan Cloud Shell, kita mendapatkan sebuah `Development Environment` berbasis browser, dan kita
+  dapat mendevelop aplikasi on cloud.
+- Ada limitasi sehingga sehingga target developmentnya cukup spesifik
+    - Web Based Development, belum bisa Mobile App development
+- Ada limitasi lainnya
+    - Khususnya dari sisi `waktu` yang diberikan
+- Masih bisa dieksplorasi lebih lanjut lagi
+    - mis. integrasi Cloud Shell dengan Editor yang ada di PC / Laptop, sehingga bisa
+      menuliskan kode di PC / Laptop, dan menjalankan aplikasi pada Cloud Shell.
+        - Membagi alam penulisan kode dan menjalankan aplikasi.
 
 ## References
 - [Techopedia - Development Environment Definition](https://www.techopedia.com/definition/16376/development-environment)
