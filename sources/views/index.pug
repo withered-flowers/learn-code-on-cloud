@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title Index
+  body
+    table(border='1')
+      thead
+        tr
+          th Id
+          th Name
+          th Stock
+      tbody
+        each e in books
+          tr
+            td= e.id
+            td= e.name
+            td= e.stock
